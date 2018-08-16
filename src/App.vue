@@ -1,20 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <SelfBlock></SelfBlock>
+    <router-view></router-view>
   </div>
 </template>
+<script>
+import SelfBlock from '@/components/SelfBlock'
+export default {
+  name: 'App',
+  components: {
+    SelfBlock
+  }
+}
+</script>
 
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  box-sizing: border-box;
+  background-color: #c5c8ce;
+  width: 100%;
+  min-height: 667px;
+  padding: 0 10px;
 }
 #nav {
   padding: 30px;
